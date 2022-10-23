@@ -1,0 +1,129 @@
+﻿@page
+@model FadascoCom.Pages.Account.EditModel
+
+<h4>Users</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Users.userId" />
+            <div class="form-group">
+                <label asp-for="Users.email" class="control-label"></label>
+                <input asp-for="Users.email" class="form-control" />
+                <span asp-validation-for="Users.email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.firstName" class="control-label"></label>
+                <input asp-for="Users.firstName" class="form-control" />
+                <span asp-validation-for="Users.firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.middleInitial" class="control-label"></label>
+                <input asp-for="Users.middleInitial" class="form-control" />
+                <span asp-validation-for="Users.middleInitial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.lastName" class="control-label"></label>
+                <input asp-for="Users.lastName" class="form-control" />
+                <span asp-validation-for="Users.lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.recoveryEmail" class="control-label"></label>
+                <input asp-for="Users.recoveryEmail" class="form-control" />
+                <span asp-validation-for="Users.recoveryEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.twoFactorAuthenticationEnabledFlag" class="control-label"></label>
+                <input asp-for="Users.twoFactorAuthenticationEnabledFlag" class="form-control" />
+                <span asp-validation-for="Users.twoFactorAuthenticationEnabledFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.recoveryQuestionId" class="control-label"></label>
+                <input asp-for="Users.recoveryQuestionId" class="form-control" />
+                <span asp-validation-for="Users.recoveryQuestionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.recoveryAnswer" class="control-label"></label>
+                <input asp-for="Users.recoveryAnswer" class="form-control" />
+                <span asp-validation-for="Users.recoveryAnswer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.recoveryEmailSetFlag" class="control-label"></label>
+                <input asp-for="Users.recoveryEmailSetFlag" class="form-control" />
+                <span asp-validation-for="Users.recoveryEmailSetFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.passwordHash" class="control-label"></label>
+                <input asp-for="Users.passwordHash" class="form-control" />
+                <span asp-validation-for="Users.passwordHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.passwordSaltId" class="control-label"></label>
+                <input asp-for="Users.passwordSaltId" class="form-control" />
+                <span asp-validation-for="Users.passwordSaltId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.phoneNumber" class="control-label"></label>
+                <input asp-for="Users.phoneNumber" class="form-control" />
+                <span asp-validation-for="Users.phoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.sysDate" class="control-label"></label>
+                <input asp-for="Users.sysDate" class="form-control" />
+                <span asp-validation-for="Users.sysDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.subscriptionId" class="control-label"></label>
+                <input asp-for="Users.subscriptionId" class="form-control" />
+                <span asp-validation-for="Users.subscriptionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.lastLogIn" class="control-label"></label>
+                <input asp-for="Users.lastLogIn" class="form-control" />
+                <span asp-validation-for="Users.lastLogIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.bannedId" class="control-label"></label>
+                <input asp-for="Users.bannedId" class="form-control" />
+                <span asp-validation-for="Users.bannedId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.accountActiveFlag" class="control-label"></label>
+                <input asp-for="Users.accountActiveFlag" class="form-control" />
+                <span asp-validation-for="Users.accountActiveFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.userPath" class="control-label"></label>
+                <input asp-for="Users.userPath" class="form-control" />
+                <span asp-validation-for="Users.userPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.userImage" class="control-label"></label>
+                <input asp-for="Users.userImage" class="form-control" />
+                <span asp-validation-for="Users.userImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.storeLogoImage" class="control-label"></label>
+                <input asp-for="Users.storeLogoImage" class="form-control" />
+                <span asp-validation-for="Users.storeLogoImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.storeBannerImage" class="control-label"></label>
+                <input asp-for="Users.storeBannerImage" class="form-control" />
+                <span asp-validation-for="Users.storeBannerImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

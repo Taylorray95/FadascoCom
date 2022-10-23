@@ -1,0 +1,150 @@
+﻿@page
+@model FadascoCom.Pages.Account.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].middleInitial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].lastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].recoveryEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].twoFactorAuthenticationEnabledFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].recoveryQuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].recoveryAnswer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].recoveryEmailSetFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].passwordHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].passwordSaltId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].phoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].sysDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].subscriptionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].lastLogIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].bannedId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].accountActiveFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].userPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].userImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].storeLogoImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].storeBannerImage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Users) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.middleInitial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recoveryEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.twoFactorAuthenticationEnabledFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recoveryQuestionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recoveryAnswer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recoveryEmailSetFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.passwordHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.passwordSaltId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sysDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subscriptionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastLogIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bannedId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accountActiveFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.storeLogoImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.storeBannerImage)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.userId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.userId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.userId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@page
+@model FadascoCom.Pages.Account.CreateModel
+<div class="row">
+    <div class="col-md-4">
+        </div>
+    <div class="col-md-4">
+<h4>Create An Account</h4>
+    
+        </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        </div>
+    <div class="col-md-4">
+        <form method="post">
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           <div class="form-group">
+                <label asp-for="Users.email" class="control-label">Email</label>
+                <input asp-for="Users.email" class="form-control" />
+                <span asp-validation-for="Users.email" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <label asp-for="Users.passwordHash"  class="control-label">Password</label>
+                <input asp-for="Users.passwordHash" id="passwordHash" class="form-control" />
+                <span asp-validation-for="Users.passwordHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Please Re-Type Your Password</label>
+                <input id="password2" class="form-control" />
+                <label id="lblValidation" class="text-danger"></label>
+            </div>
+ 
+            <div class="form-group">
+           @*     <label asp-for="Users.sysDate" class="control-label"></label>
+                <input asp-for="Users.sysDate" value="<%=DateTime.Now.ToString(" yyyy-MM-dd") %>" class="form-control" />*@
+          @*      <span asp-validation-for="Users.sysDate" class="text-danger"></span>*@
+            </div>
+
+            <div class="form-group">
+             @*   <label asp-for="Users.lastLogIn" class="control-label"></label>
+                <input asp-for="Users.lastLogIn" value="<%=DateTime.Now.ToString(" yyyy-MM-dd") %>" class="form-control" />*@
+              @*  <span asp-validation-for="Users.lastLogIn" class="text-danger"></span>*@
+            </div>
+
+            <div class="form-group">
+                <input type="submit" onclick="return val()" value="Create" class="btn btn-primary" />
+            </div>
+          
+        </form>
+    </div>
+</div>
+
+<div>
+  @*  <a asp-page="Index">Back to List</a>*@
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,139 @@
+﻿@page
+@model FadascoCom.Pages.Account.DetailsModel
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.firstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.firstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.middleInitial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.middleInitial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.lastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.lastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.recoveryEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.recoveryEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.twoFactorAuthenticationEnabledFlag)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.twoFactorAuthenticationEnabledFlag)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.recoveryQuestionId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.recoveryQuestionId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.recoveryAnswer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.recoveryAnswer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.recoveryEmailSetFlag)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.recoveryEmailSetFlag)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.passwordHash)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.passwordHash)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.passwordSaltId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.passwordSaltId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.phoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.phoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.sysDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.sysDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.subscriptionId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.subscriptionId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.lastLogIn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.lastLogIn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.bannedId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.bannedId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.accountActiveFlag)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.accountActiveFlag)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.userPath)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.userPath)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.userImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.userImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.storeLogoImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.storeLogoImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Users.storeBannerImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Users.storeBannerImage)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Users?.userId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
